@@ -1,13 +1,33 @@
 import './App.css';
-import Input from './component/Input'
-import Button from './component/Button'
-
+import Todos from './component/Todos'
 
 function App() {
+  const todos = [
+    {
+        title: 'Go to School!',
+        isCompleted: false
+    },
+    {
+        title: 'Buy milk!',
+        isCompleted: true
+    },
+    {
+        title: 'Drive a Car!',
+        isCompleted: false
+    },
+    {
+      title: 'Get good mark!',
+      isCompleted: true
+  },
+  {
+    title: 'Learn English!',
+    isCompleted: false
+  },
+  
+]
   return (
     <div> 
-      <Input width="200px" height="40px" type="password"/>
-      <Button width="200px" height="40px" bacground="red" color="black"/>
+      <Todos data={todos}/>
     </div>
   );
 }
